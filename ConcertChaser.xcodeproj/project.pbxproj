@@ -1,0 +1,527 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		679ABE8D1D9C307500C10395 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679ABE8C1D9C307500C10395 /* AppDelegate.swift */; };
+		679ABE8F1D9C307500C10395 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679ABE8E1D9C307500C10395 /* ViewController.swift */; };
+		679ABE921D9C307500C10395 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 679ABE901D9C307500C10395 /* Main.storyboard */; };
+		679ABE951D9C307500C10395 /* ConcertChaser.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 679ABE931D9C307500C10395 /* ConcertChaser.xcdatamodeld */; };
+		679ABE971D9C307500C10395 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 679ABE961D9C307500C10395 /* Assets.xcassets */; };
+		679ABE9A1D9C307500C10395 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 679ABE981D9C307500C10395 /* LaunchScreen.storyboard */; };
+		679ABEA51D9C307500C10395 /* ConcertChaserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679ABEA41D9C307500C10395 /* ConcertChaserTests.swift */; };
+		679ABEB01D9C307500C10395 /* ConcertChaserUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679ABEAF1D9C307500C10395 /* ConcertChaserUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		679ABEA11D9C307500C10395 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 679ABE811D9C307500C10395 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 679ABE881D9C307500C10395;
+			remoteInfo = ConcertChaser;
+		};
+		679ABEAC1D9C307500C10395 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 679ABE811D9C307500C10395 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 679ABE881D9C307500C10395;
+			remoteInfo = ConcertChaser;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		679ABE891D9C307500C10395 /* ConcertChaser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConcertChaser.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		679ABE8C1D9C307500C10395 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		679ABE8E1D9C307500C10395 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		679ABE911D9C307500C10395 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		679ABE941D9C307500C10395 /* ConcertChaser.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ConcertChaser.xcdatamodel; sourceTree = "<group>"; };
+		679ABE961D9C307500C10395 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		679ABE991D9C307500C10395 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		679ABE9B1D9C307500C10395 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		679ABEA01D9C307500C10395 /* ConcertChaserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConcertChaserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		679ABEA41D9C307500C10395 /* ConcertChaserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcertChaserTests.swift; sourceTree = "<group>"; };
+		679ABEA61D9C307500C10395 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		679ABEAB1D9C307500C10395 /* ConcertChaserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConcertChaserUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		679ABEAF1D9C307500C10395 /* ConcertChaserUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcertChaserUITests.swift; sourceTree = "<group>"; };
+		679ABEB11D9C307500C10395 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		679ABE861D9C307500C10395 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		679ABE9D1D9C307500C10395 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		679ABEA81D9C307500C10395 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		679ABE801D9C307500C10395 = {
+			isa = PBXGroup;
+			children = (
+				679ABE8B1D9C307500C10395 /* ConcertChaser */,
+				679ABEA31D9C307500C10395 /* ConcertChaserTests */,
+				679ABEAE1D9C307500C10395 /* ConcertChaserUITests */,
+				679ABE8A1D9C307500C10395 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		679ABE8A1D9C307500C10395 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				679ABE891D9C307500C10395 /* ConcertChaser.app */,
+				679ABEA01D9C307500C10395 /* ConcertChaserTests.xctest */,
+				679ABEAB1D9C307500C10395 /* ConcertChaserUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		679ABE8B1D9C307500C10395 /* ConcertChaser */ = {
+			isa = PBXGroup;
+			children = (
+				679ABE8C1D9C307500C10395 /* AppDelegate.swift */,
+				679ABE8E1D9C307500C10395 /* ViewController.swift */,
+				679ABE901D9C307500C10395 /* Main.storyboard */,
+				679ABE961D9C307500C10395 /* Assets.xcassets */,
+				679ABE981D9C307500C10395 /* LaunchScreen.storyboard */,
+				679ABE9B1D9C307500C10395 /* Info.plist */,
+				679ABE931D9C307500C10395 /* ConcertChaser.xcdatamodeld */,
+			);
+			path = ConcertChaser;
+			sourceTree = "<group>";
+		};
+		679ABEA31D9C307500C10395 /* ConcertChaserTests */ = {
+			isa = PBXGroup;
+			children = (
+				679ABEA41D9C307500C10395 /* ConcertChaserTests.swift */,
+				679ABEA61D9C307500C10395 /* Info.plist */,
+			);
+			path = ConcertChaserTests;
+			sourceTree = "<group>";
+		};
+		679ABEAE1D9C307500C10395 /* ConcertChaserUITests */ = {
+			isa = PBXGroup;
+			children = (
+				679ABEAF1D9C307500C10395 /* ConcertChaserUITests.swift */,
+				679ABEB11D9C307500C10395 /* Info.plist */,
+			);
+			path = ConcertChaserUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		679ABE881D9C307500C10395 /* ConcertChaser */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 679ABEB41D9C307500C10395 /* Build configuration list for PBXNativeTarget "ConcertChaser" */;
+			buildPhases = (
+				679ABE851D9C307500C10395 /* Sources */,
+				679ABE861D9C307500C10395 /* Frameworks */,
+				679ABE871D9C307500C10395 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ConcertChaser;
+			productName = ConcertChaser;
+			productReference = 679ABE891D9C307500C10395 /* ConcertChaser.app */;
+			productType = "com.apple.product-type.application";
+		};
+		679ABE9F1D9C307500C10395 /* ConcertChaserTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 679ABEB71D9C307500C10395 /* Build configuration list for PBXNativeTarget "ConcertChaserTests" */;
+			buildPhases = (
+				679ABE9C1D9C307500C10395 /* Sources */,
+				679ABE9D1D9C307500C10395 /* Frameworks */,
+				679ABE9E1D9C307500C10395 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				679ABEA21D9C307500C10395 /* PBXTargetDependency */,
+			);
+			name = ConcertChaserTests;
+			productName = ConcertChaserTests;
+			productReference = 679ABEA01D9C307500C10395 /* ConcertChaserTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		679ABEAA1D9C307500C10395 /* ConcertChaserUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 679ABEBA1D9C307500C10395 /* Build configuration list for PBXNativeTarget "ConcertChaserUITests" */;
+			buildPhases = (
+				679ABEA71D9C307500C10395 /* Sources */,
+				679ABEA81D9C307500C10395 /* Frameworks */,
+				679ABEA91D9C307500C10395 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				679ABEAD1D9C307500C10395 /* PBXTargetDependency */,
+			);
+			name = ConcertChaserUITests;
+			productName = ConcertChaserUITests;
+			productReference = 679ABEAB1D9C307500C10395 /* ConcertChaserUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		679ABE811D9C307500C10395 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Vanessa Bell";
+				TargetAttributes = {
+					679ABE881D9C307500C10395 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = BU873PKFN4;
+					};
+					679ABE9F1D9C307500C10395 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = BU873PKFN4;
+						TestTargetID = 679ABE881D9C307500C10395;
+					};
+					679ABEAA1D9C307500C10395 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = BU873PKFN4;
+						TestTargetID = 679ABE881D9C307500C10395;
+					};
+				};
+			};
+			buildConfigurationList = 679ABE841D9C307500C10395 /* Build configuration list for PBXProject "ConcertChaser" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 679ABE801D9C307500C10395;
+			productRefGroup = 679ABE8A1D9C307500C10395 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				679ABE881D9C307500C10395 /* ConcertChaser */,
+				679ABE9F1D9C307500C10395 /* ConcertChaserTests */,
+				679ABEAA1D9C307500C10395 /* ConcertChaserUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		679ABE871D9C307500C10395 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				679ABE9A1D9C307500C10395 /* LaunchScreen.storyboard in Resources */,
+				679ABE971D9C307500C10395 /* Assets.xcassets in Resources */,
+				679ABE921D9C307500C10395 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		679ABE9E1D9C307500C10395 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		679ABEA91D9C307500C10395 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		679ABE851D9C307500C10395 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				679ABE8F1D9C307500C10395 /* ViewController.swift in Sources */,
+				679ABE8D1D9C307500C10395 /* AppDelegate.swift in Sources */,
+				679ABE951D9C307500C10395 /* ConcertChaser.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		679ABE9C1D9C307500C10395 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				679ABEA51D9C307500C10395 /* ConcertChaserTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		679ABEA71D9C307500C10395 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				679ABEB01D9C307500C10395 /* ConcertChaserUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		679ABEA21D9C307500C10395 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 679ABE881D9C307500C10395 /* ConcertChaser */;
+			targetProxy = 679ABEA11D9C307500C10395 /* PBXContainerItemProxy */;
+		};
+		679ABEAD1D9C307500C10395 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 679ABE881D9C307500C10395 /* ConcertChaser */;
+			targetProxy = 679ABEAC1D9C307500C10395 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		679ABE901D9C307500C10395 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				679ABE911D9C307500C10395 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		679ABE981D9C307500C10395 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				679ABE991D9C307500C10395 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		679ABEB21D9C307500C10395 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		679ABEB31D9C307500C10395 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		679ABEB51D9C307500C10395 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ConcertChaser/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.ConcertChaser;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		679ABEB61D9C307500C10395 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ConcertChaser/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.ConcertChaser;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		679ABEB81D9C307500C10395 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ConcertChaserTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.ConcertChaserTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ConcertChaser.app/ConcertChaser";
+			};
+			name = Debug;
+		};
+		679ABEB91D9C307500C10395 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ConcertChaserTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.ConcertChaserTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ConcertChaser.app/ConcertChaser";
+			};
+			name = Release;
+		};
+		679ABEBB1D9C307500C10395 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ConcertChaserUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.ConcertChaserUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ConcertChaser;
+			};
+			name = Debug;
+		};
+		679ABEBC1D9C307500C10395 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ConcertChaserUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.ConcertChaserUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ConcertChaser;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		679ABE841D9C307500C10395 /* Build configuration list for PBXProject "ConcertChaser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				679ABEB21D9C307500C10395 /* Debug */,
+				679ABEB31D9C307500C10395 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		679ABEB41D9C307500C10395 /* Build configuration list for PBXNativeTarget "ConcertChaser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				679ABEB51D9C307500C10395 /* Debug */,
+				679ABEB61D9C307500C10395 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		679ABEB71D9C307500C10395 /* Build configuration list for PBXNativeTarget "ConcertChaserTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				679ABEB81D9C307500C10395 /* Debug */,
+				679ABEB91D9C307500C10395 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		679ABEBA1D9C307500C10395 /* Build configuration list for PBXNativeTarget "ConcertChaserUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				679ABEBB1D9C307500C10395 /* Debug */,
+				679ABEBC1D9C307500C10395 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		679ABE931D9C307500C10395 /* ConcertChaser.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				679ABE941D9C307500C10395 /* ConcertChaser.xcdatamodel */,
+			);
+			currentVersion = 679ABE941D9C307500C10395 /* ConcertChaser.xcdatamodel */;
+			path = ConcertChaser.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 679ABE811D9C307500C10395 /* Project object */;
+}
