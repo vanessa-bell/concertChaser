@@ -1,25 +1,463 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="TaP-te-S6B">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Concerts-->
+        <scene sceneID="7rl-Rx-gua">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                <tableViewController title="Concerts" id="LFa-Ns-Zbs" customClass="ConcertsViewController" customModule="ConcertChaser" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="SK9-hU-yXO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search" id="GNs-oU-VUN">
+                            <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ConcertCell" textLabel="hot-gP-9Jq" rowHeight="60" style="IBUITableViewCellStyleDefault" id="Zlq-6o-hco" customClass="ConcertCell" customModule="ConcertChaser" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="136" width="375" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zlq-6o-hco" id="Dez-Zi-ngc">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hot-gP-9Jq">
+                                            <rect key="frame" x="15" y="0.0" width="345" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Bal-YF-gyd" kind="show" identifier="ShowDetails" id="Lhb-Kx-ous"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="LFa-Ns-Zbs" id="vqn-97-uTV"/>
+                            <outlet property="delegate" destination="LFa-Ns-Zbs" id="uLl-aO-nd8"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Upcoming Shows" id="FJX-f0-nle"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QHI-uM-rAW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1318" y="-386"/>
+        </scene>
+        <!--Concert Details View Controller-->
+        <scene sceneID="NPY-YK-ysu">
+            <objects>
+                <viewController id="Bal-YF-gyd" customClass="ConcertDetailsViewController" customModule="ConcertChaser" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="56M-43-3dB"/>
+                        <viewControllerLayoutGuide type="bottom" id="3Zj-il-Ct5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YYg-7R-eXx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="displayName" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBL-6A-A1L">
+                                <rect key="frame" x="9" y="72" width="355" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="RDS-Ft-TOO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wME-Zc-d2a">
+                                <rect key="frame" x="16" y="145" width="342" height="473"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" link="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sYH-6o-HsN" customClass="DOFavoriteButton" customModule="DOFavoriteButton">
+                                <rect key="frame" x="276" y="108" width="35" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="fac-q4-1Ui"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="imageColorOn">
+                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="imageColorOff">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="heart.png"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
+                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LF9-lD-pQE">
+                                <rect key="frame" x="114" y="108" width="144" height="34"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Buy Tickets"/>
+                                <connections>
+                                    <action selector="buyTicketsButtonPressed:" destination="Bal-YF-gyd" eventType="touchUpInside" id="SL4-FA-5yO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wME-Zc-d2a" firstAttribute="bottom" secondItem="3Zj-il-Ct5" secondAttribute="top" id="Ckf-7P-FkW"/>
+                            <constraint firstItem="LF9-lD-pQE" firstAttribute="top" secondItem="sYH-6o-HsN" secondAttribute="top" id="N9L-Q0-L2n"/>
+                            <constraint firstItem="sYH-6o-HsN" firstAttribute="leading" secondItem="LF9-lD-pQE" secondAttribute="trailing" constant="18" id="Nkj-Y3-brc"/>
+                            <constraint firstItem="gBL-6A-A1L" firstAttribute="centerX" secondItem="LF9-lD-pQE" secondAttribute="centerX" constant="0.5" id="Ov3-Vn-wdH"/>
+                            <constraint firstItem="gBL-6A-A1L" firstAttribute="top" secondItem="56M-43-3dB" secondAttribute="bottom" constant="8" symbolic="YES" id="Qsa-xd-wSn"/>
+                            <constraint firstItem="wME-Zc-d2a" firstAttribute="top" secondItem="LF9-lD-pQE" secondAttribute="bottom" constant="3" id="RAd-3G-aNk"/>
+                            <constraint firstItem="wME-Zc-d2a" firstAttribute="leading" secondItem="YYg-7R-eXx" secondAttribute="leadingMargin" id="YNE-5y-LKs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sYH-6o-HsN" secondAttribute="trailing" constant="48" id="YTs-KT-tCr"/>
+                            <constraint firstItem="wME-Zc-d2a" firstAttribute="centerX" secondItem="YYg-7R-eXx" secondAttribute="centerX" id="ehP-Ke-CQd"/>
+                            <constraint firstItem="gBL-6A-A1L" firstAttribute="centerX" secondItem="wME-Zc-d2a" secondAttribute="centerX" id="gsb-rr-j1z"/>
+                            <constraint firstItem="gBL-6A-A1L" firstAttribute="leading" secondItem="YYg-7R-eXx" secondAttribute="leadingMargin" constant="-7" id="tT1-wq-N99"/>
+                            <constraint firstItem="LF9-lD-pQE" firstAttribute="top" secondItem="gBL-6A-A1L" secondAttribute="bottom" constant="8" symbolic="YES" id="xzN-qZ-R7p"/>
+                            <constraint firstItem="LF9-lD-pQE" firstAttribute="bottom" secondItem="sYH-6o-HsN" secondAttribute="bottom" id="ziq-yY-GHP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="displayName" destination="gBL-6A-A1L" id="1mF-DC-Rmp"/>
+                        <outlet property="favoriteButton" destination="sYH-6o-HsN" id="7Cc-YU-y91"/>
+                        <outlet property="performanceDetails" destination="wME-Zc-d2a" id="TFB-Tj-3nK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m0g-Au-q6G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1579.5" y="1179.5"/>
+        </scene>
+        <!--Your Plans-->
+        <scene sceneID="FUS-kW-4aY">
+            <objects>
+                <tableViewController id="ByT-B5-ZdM" customClass="FavoritesViewController" customModule="ConcertChaser" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="pAD-SG-Ikn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ConcertCell" textLabel="kMH-MG-pG6" style="IBUITableViewCellStyleDefault" id="S73-Be-ghN" customClass="ConcertCell" customModule="ConcertChaser" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="S73-Be-ghN" id="7gW-2E-oOy">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kMH-MG-pG6">
+                                            <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Bal-YF-gyd" kind="show" identifier="ShowConcertDetails" id="Qg6-mG-3C3"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ByT-B5-ZdM" id="Gog-vQ-8iz"/>
+                            <outlet property="delegate" destination="ByT-B5-ZdM" id="ZB6-Qk-j7Z"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Your Plans" id="zW6-qU-Kae"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GrT-wk-JtH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="896" y="1180"/>
+        </scene>
+        <!--Preferences-->
+        <scene sceneID="XUC-tl-kTl">
+            <objects>
+                <tableViewController title="Preferences" id="79x-NZ-TwR" customClass="PreferencesViewController" customModule="ConcertChaser" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="JMD-1N-YVc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <sections>
+                            <tableViewSection headerTitle="Change Metro Area" id="9XV-iW-aKY">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="kyG-Ov-WeG">
+                                        <rect key="frame" x="0.0" y="114" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kyG-Ov-WeG" id="exC-h0-SFC">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="San Francisco Bay Area" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CQ4-hQ-uTI">
+                                                    <rect key="frame" x="8" y="8" width="279" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="TGR-JO-fcF" kind="show" identifier="MetroSearchResults" id="qvZ-0e-Uwk"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="79x-NZ-TwR" id="urP-Go-Tq1"/>
+                            <outlet property="delegate" destination="79x-NZ-TwR" id="nJi-mU-CCs"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Preferences" id="ycE-bv-Phg"/>
+                    <connections>
+                        <outlet property="metroAreaTextField" destination="CQ4-hQ-uTI" id="1n7-Fl-h36"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BYH-Wb-Ef6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-440" y="2055"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="QnY-rz-G7Q">
+            <objects>
+                <tableViewController id="TGR-JO-fcF" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="90y-1a-RN8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchResult" id="Plj-qy-odd">
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Plj-qy-odd" id="edV-js-Mon">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="TGR-JO-fcF" id="cGE-HN-aT3"/>
+                            <outlet property="delegate" destination="TGR-JO-fcF" id="i0U-Ur-oki"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="03q-JP-arw" id="Met-v8-FRt"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fqz-pk-Oko" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="03q-JP-arw">
+                    <connections>
+                        <outlet property="delegate" destination="TGR-JO-fcF" id="mQJ-Bs-xIv"/>
+                        <outlet property="searchContentsController" destination="TGR-JO-fcF" id="k8j-Vk-oK6"/>
+                        <outlet property="searchResultsDataSource" destination="TGR-JO-fcF" id="ZCl-jv-S3P"/>
+                        <outlet property="searchResultsDelegate" destination="TGR-JO-fcF" id="CGf-hy-PQ9"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="221" y="2055"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="dP4-MD-JjP">
+            <objects>
+                <tabBarController id="TaP-te-S6B" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="7NB-yW-tQ0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="wL0-wH-53x" kind="relationship" relationship="viewControllers" id="yuO-Sq-jnv"/>
+                        <segue destination="W8S-nj-00Z" kind="relationship" relationship="viewControllers" id="yFi-IB-MjO"/>
+                        <segue destination="g8B-UC-vQX" kind="relationship" relationship="viewControllers" id="QyQ-wB-QOj"/>
+                        <segue destination="M1p-rg-6ct" kind="relationship" relationship="viewControllers" id="BJF-Wb-kXa"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ith-oT-Gfk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-440" y="405"/>
+        </scene>
+        <!--Venues-->
+        <scene sceneID="eev-es-DMg">
+            <objects>
+                <tableViewController title="Venues" id="1PJ-ke-zj2" customClass="VenuesViewController" customModule="ConcertChaser" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Lec-dh-VER">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search" id="Bsg-G5-gQH">
+                            <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="VenueCell" id="Vdv-JU-hOE" customClass="VenueCell" customModule="ConcertChaser" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="136" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vdv-JU-hOE" id="SK7-8h-ERt">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="O6Z-Og-TeS" kind="show" identifier="ShowVenueCalendar" id="v5l-q6-2Xe"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="1PJ-ke-zj2" id="csM-9D-WJi"/>
+                            <outlet property="delegate" destination="1PJ-ke-zj2" id="g6f-Ez-KFx"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Venues Near You" id="H7f-mG-w31"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eSl-ah-G9O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="932" y="405"/>
+        </scene>
+        <!--Venue Calendar View Controller-->
+        <scene sceneID="vuW-a1-pG4">
+            <objects>
+                <tableViewController id="O6Z-Og-TeS" customClass="VenueCalendarViewController" customModule="ConcertChaser" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="xAR-ch-bJk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search" id="7KL-Nw-SnE">
+                            <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="VenueEvent" textLabel="7xz-XF-nPh" style="IBUITableViewCellStyleDefault" id="j8L-8V-lkV" customClass="ConcertCell" customModule="ConcertChaser" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="136" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="j8L-8V-lkV" id="9dG-8b-TjS">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7xz-XF-nPh">
+                                            <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Bal-YF-gyd" kind="show" identifier="ShowConcertDetails" id="KwW-mQ-Qcu"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="O6Z-Og-TeS" id="sWn-ct-nba"/>
+                            <outlet property="delegate" destination="O6Z-Og-TeS" id="1Ux-qj-x3B"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u9j-gM-lrx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1914" y="405"/>
+        </scene>
+        <!--Concerts-->
+        <scene sceneID="Rjw-Lf-FOv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wL0-wH-53x" customClass="NavigationController" customModule="ConcertChaser" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Concerts" image="appbar.music" id="pcp-YZ-Je2" userLabel="Concerts"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ld4-DT-fD4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="LFa-Ns-Zbs" kind="relationship" relationship="rootViewController" id="PAE-Kh-8b6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xf9-fH-6NR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="346" y="-386"/>
+        </scene>
+        <!--Preferences-->
+        <scene sceneID="qGW-Qs-niT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="M1p-rg-6ct" customClass="NavigationController" customModule="ConcertChaser" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Preferences" image="appbar.settings" id="Sad-4C-AUB"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Of8-lL-m1S">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="79x-NZ-TwR" kind="relationship" relationship="rootViewController" id="gFa-AO-E8f"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mfM-vR-up6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-440" y="1333"/>
+        </scene>
+        <!--Venues-->
+        <scene sceneID="QLS-Yx-FH7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="W8S-nj-00Z" customClass="NavigationController" customModule="ConcertChaser" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Venues" image="appbar.location.checkin" id="uff-yh-KaP"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tax-il-d4H">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="1PJ-ke-zj2" kind="relationship" relationship="rootViewController" id="Vn8-GS-8Mb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7SS-PT-zfa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="262" y="405"/>
+        </scene>
+        <!--Plans-->
+        <scene sceneID="san-so-DTY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="g8B-UC-vQX" customClass="NavigationController" customModule="ConcertChaser" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Plans" image="Calendar" id="VXd-vr-11R"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pJn-60-7tf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ByT-B5-ZdM" kind="relationship" relationship="rootViewController" id="5hJ-Gm-g98"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A87-A6-Wxh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="221" y="1180"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Calendar" width="30" height="30"/>
+        <image name="appbar.location.checkin" width="48" height="48"/>
+        <image name="appbar.music" width="48" height="48"/>
+        <image name="appbar.settings" width="48" height="48"/>
+        <image name="heart.png" width="128" height="128"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="KwW-mQ-Qcu"/>
+    </inferredMetricsTieBreakers>
+    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
